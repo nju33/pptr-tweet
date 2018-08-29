@@ -35,14 +35,15 @@ const tweet = async (page, message) => {
  * @param {string} message
  * @param {User} user
  */
-module.exports = async (
-	message,
-	user = {}
-) => {
-	Object.assign(user, {
-		username: process.env.TWITTER_USERNAME,
-		password: process.env.TWITTER_PASSWORD
-	});
+module.exports = async (message, user = {}) => {
+	user = {
+		...{
+			username: process.env.TWITTER_USERNAME,
+			password: process.env.TWITTER_PASSWORD
+		},
+		...user
+	};
+
 	checkNonEmptyString(message);
 	checkNonEmptyString(user.username);
 	checkNonEmptyString(user.password);
