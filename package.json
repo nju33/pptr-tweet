@@ -1,4 +1,8 @@
 {
+  "name": "pptr-tweet",
+  "version": "0.0.0",
+  "main": "src/index.js",
+  "repository": "nju33:pptr-tweet",
   "dependencies": {
     "delay": "^3.1.0",
     "dotenv": "^6.0.0",
@@ -11,6 +15,7 @@
     "eslint-config-xo": "^0.24.2"
   },
   "scripts": {
-    "example.run": "node -r dotenv/config example"
+    "example.run": "node -r dotenv/config example",
+    "test": ":"
   }
 }
